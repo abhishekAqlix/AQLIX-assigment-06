@@ -1,8 +1,27 @@
 # Coupon Redemption System
 
+## Backend
+
+Create `.env`
+
+```env
+PORT=8000
+MONGO_DB_URI=add_your_connection_string
+FRONTEND_URL=http://localhost:3000
+```
+
+Add your MongoDB URL.
+
+Run:
+
+```bash
+npm install
+npm run dev
+```
+
 ## Create Coupon
 
-Enter:
+Add:
 
 * Title
 * Code
@@ -10,21 +29,21 @@ Enter:
 * Max Redemption
 * Expiry Date
 
-Click **Create Coupon**
+Click Create.
 
 ## Redeem Coupon
 
-Enter:
+Add:
 
-* Coupon Code
+* Code
 * User Email
 
-Click **Redeem**
+Click Redeem.
 
 ## Features
 
 * Create coupon
 * Redeem coupon
-* Prevent duplicate redemption
-* User who created coupon cannot redeem it
-* Handle concurrent redemption requests
+* One user can redeem once
+* Creator cannot redeem own coupon
+* Handle multiple requests for last coupon
