@@ -2,15 +2,15 @@
 
 ## Backend
 
-I have added `.env` intentionally to make backend setup easier.
+I have added `.env` file intentionally so backend can run easily.
 
-Just add your MongoDB connection string in:
+Add your MongoDB connection string in:
 
 ```env
 MONGO_DB_URI=
 ```
 
-Then run:
+Run backend:
 
 ```bash
 npm install
@@ -23,7 +23,7 @@ Add:
 
 * Title
 * Code
-* User Email
+* User Email *(authentication is not added, so user email is stored to know who created coupon and same user cannot redeem it later)*
 * Max Redemption
 * Expiry Date
 
@@ -42,6 +42,6 @@ Click Redeem.
 
 * Create coupon
 * Redeem coupon
-* One user can redeem once
-* Creator cannot redeem own coupon
+* One user can redeem only once
+* User who created coupon cannot redeem it
 * Handle multiple requests for last coupon
